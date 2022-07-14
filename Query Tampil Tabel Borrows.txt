@@ -1,0 +1,7 @@
+SELECT
+  borrows.`borrorwid` AS "No",students.`name` AS "Siswa",borrows.`takenDate` AS "Meminjam",borrows.`broughtDate` AS "Kembali",books.`name` AS "Buku",books.`pagecount` AS "Jumlah Halaman",books.`authorId` AS "Penulis",books.`typeId` AS "Type"
+FROM borrows
+JOIN students
+  ON borrows.`studentid`=students.`studentid`
+JOIN books
+  ON borrows.`bookid`=books.`bookid`
